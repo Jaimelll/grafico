@@ -1,0 +1,74 @@
+<h1>Weolcome1#index</h1>
+<p>Find me in app/views/weolcome1/index.html.erb</p>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bar char</title>
+
+        <script
+         src="https://code.jquery.com/jquery-3.1.1.min.js"
+         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+         crossorigin="anonymous"></script>
+         <script src="http://code.highcharts.com/highcharts.js"></script>
+
+
+    </head>
+
+    <body>
+
+        <script>
+        $(function () {
+
+          var myChart = Highcharts.chart('container', {
+                chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'PROCESOS DE COMPRAS'
+    },
+    xAxis: {
+        categories: ['Carros' , 'Camiones', 'Helicopteros', 'Buques', 'Aviones']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total Compras'
+        }
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'true'
+        }
+    },
+    series: [{
+        name: 'Quinta Adquisición',
+        data: [140, 30, 40, 70, 20]
+    },
+    {
+    name: 'Cuarta Adquisición',
+    data: [150, 80, 40, 90, 120]
+    },
+    {
+    name: 'Tercera Adquisición',
+    data: [50, 30, 40, 80, 20]
+    },
+    {
+        name: 'Segunda Adquisición',
+        data: [20, 20, 30, 20, 10]
+    }, {
+        name: 'Primera Adquisición',
+        data: [30, 45, 40, 20, 50]
+    }]
+})
+});
+
+
+        </script>
+
+    <div id="container"></div>
+    </body>
+</html>

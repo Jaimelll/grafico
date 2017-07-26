@@ -1,0 +1,62 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<%= stylesheet_link_tag    'application', media: 'all' %>
+<%= javascript_include_tag 'application' %>
+<%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+  <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+<%= stylesheet_link_tag 'http://yandex.st/bootstrap/3.1.1/css/bootstrap.min.css' %>
+<%= javascript_include_tag 'http://yandex.st/bootstrap/3.1.1/js/bootstrap.min.js' %>
+
+<%= javascript_include_tag "https://www.google.com/jsapi" %>
+
+
+
+<%= javascript_include_tag "//www.google.com/jsapi" %>
+<%= javascript_include_tag "application", "chartkick" %>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<% Chartkick.options = {
+  colors: ["#29B6F6", "#FFEE58", "#FFA000", "#29B6F6", "#B71C1C","#1A237E"],
+  stacked: true,
+  legend: 'bottom',
+
+  title: 'PROCESOS DE COMPRAS'
+  } %>
+
+
+<%= bar_chart [
+      {name: "EXC", data: {"Concurso N°03448": [1000]}},
+      {name: "EXC", data: {"Concurso N°03448": [2000]}},
+      {name: "LBA", data: {"Aviones": [7548,8956]}},
+      {name: "LBA", data: {"Aviones": [8956]}},
+      {name: "EXC", data: {"Barcos": [7548,8956]}},
+      {name: "EXC", data: {"Barcos": [8956]}},
+      {name: "LBA", data: {"Barcos": [8548,9956]}},
+      {name: "LBA", data: {"Barcos": [9956]}},
+      {name: "LBA", data: {"Barcos": [9548,10956]}},
+      {name: "LBA", data: {"Barcos": [10956]}},
+      {name: "EXC", data: {"Carros": [7548,8956]}},
+      {name: "EXC", data: {"Carros": [8956]}},
+      {name: "LBA", data: {"Carros": [7548,8956]}},
+      {name: "LBA", data: {"Carros": [8956]}},
+    ]
+  %>
+
+  <% Chartkick.options = {
+    colors: ["#29B6F6", "#FFEE58", "#FFA000", "#29B6F6", "#B71C1C","#1A237E"],
+    stacked: true,
+    legend: 'bottom',
+
+    title: 'PROCESOS DE COMPRAS'
+    } %>
+  <%= bar_chart [
+[(link_to 'Washington', weolcome1_index_path), "17", "21"],
+["Adams", "15", "18"],
+["Washington", "18", "19"],
+["Jefferson", "20", "15"]
+] %>
